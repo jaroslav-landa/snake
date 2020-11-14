@@ -1,5 +1,6 @@
 {
   "name": "snake",
+  "homepage": "http://www.snake.funsite.cz/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
