@@ -7,14 +7,18 @@ const initialState = {
   fruit: getRandomCoordinates(),
   speed: 80,
   direciton: "RIGHT",
-  snakeBlocks: [[0, 0],[2, 0]]
-}
+  snakeBlocks: [
+    [0, 0],
+    [2, 0],
+  ],
+};
 
 function getRandomCoordinates() {
   let min = 1;
   let max = 98;
   let x = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
   let y = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+  console.log(x, y)
   return [x, y];
 }
 
@@ -33,7 +37,6 @@ class App extends Component {
   }
 
   onKeyDown = (e) => {
-    e = e || window.event;
     switch (e.keyCode) {
       case 38:
         this.setState({ direction: "UP" });
